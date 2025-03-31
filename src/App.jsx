@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className='text-green-600'>Welcome to Vite + React</h1>
+        <h1 className='text-pink-600'>Welcome to Vite + React</h1>
         <p>
           <button onClick={() => setCount((count) => count + 1)}>
             Count: {count}
