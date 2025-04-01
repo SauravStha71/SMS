@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 const TableComponent = () => {
-  // Dummy data structure (without real info from the image)
   const [data, setData] = useState([
     {
       id: 1,
@@ -33,7 +32,6 @@ const TableComponent = () => {
     },
   ]);
 
-  // Handle checkbox selection
   const toggleSelect = (id) => {
     setData((prevData) =>
       prevData.map((row) =>
@@ -43,23 +41,23 @@ const TableComponent = () => {
   };
 
   return (
-    <div className="overflow-x-auto">
-      <table className="w-full border border-gray-300">
+    <div className="overflow-x-auto p-4">
+      <table className="w-full border border-gray-300 shadow-lg rounded-lg">
         <thead>
-          <tr className="bg-gray-200">
-            <th className="border p-2">
+          <tr className="bg-blue-600 text-white">
+            <th className="border p-3 text-center">
               <input type="checkbox" disabled />
             </th>
-            <th className="border p-2">Branch Code</th>
-            <th className="border p-2">Branch</th>
-            <th className="border p-2">SCNO</th>
-            <th className="border p-2">Customer ID</th>
-            <th className="border p-2">Name</th>
-            <th className="border p-2">Address</th>
-            <th className="border p-2">Mobile Number</th>
-            <th className="border p-2">No. of Days</th>
-            <th className="border p-2">Balance Amount</th>
-            <th className="border p-2">Prepaid Date</th>
+            <th className="border p-3">Branch Code</th>
+            <th className="border p-3">Branch</th>
+            <th className="border p-3">SCNO</th>
+            <th className="border p-3">Customer ID</th>
+            <th className="border p-3">Name</th>
+            <th className="border p-3">Address</th>
+            <th className="border p-3">Mobile Number</th>
+            <th className="border p-3">No. of Days</th>
+            <th className="border p-3">Balance Amount</th>
+            <th className="border p-3">Prepaid Date</th>
           </tr>
         </thead>
         <tbody>
@@ -68,25 +66,25 @@ const TableComponent = () => {
               key={row.id}
               className={`border ${
                 row.selected ? "bg-blue-300" : "even:bg-blue-100 odd:bg-white"
-              }`}
+              } hover:bg-blue-200 transition-all`}
             >
-              <td className="border p-2 text-center">
+              <td className="border p-3 text-center">
                 <input
                   type="checkbox"
                   checked={row.selected}
                   onChange={() => toggleSelect(row.id)}
                 />
               </td>
-              <td className="border p-2">{row.branchCode}</td>
-              <td className="border p-2">{row.branch}</td>
-              <td className="border p-2">{row.scno}</td>
-              <td className="border p-2">{row.customerId}</td>
-              <td className="border p-2">{row.name}</td>
-              <td className="border p-2">{row.address}</td>
-              <td className="border p-2">{row.mobile}</td>
-              <td className="border p-2">{row.days}</td>
-              <td className="border p-2">{row.balance}</td>
-              <td className="border p-2">{row.prepaidDate}</td>
+              <td className="border p-3">{row.branchCode}</td>
+              <td className="border p-3">{row.branch}</td>
+              <td className="border p-3">{row.scno}</td>
+              <td className="border p-3">{row.customerId}</td>
+              <td className="border p-3">{row.name}</td>
+              <td className="border p-3">{row.address}</td>
+              <td className="border p-3">{row.mobile}</td>
+              <td className="border p-3">{row.days}</td>
+              <td className="border p-3">{row.balance}</td>
+              <td className="border p-3">{row.prepaidDate}</td>
             </tr>
           ))}
         </tbody>
