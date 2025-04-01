@@ -6,7 +6,7 @@ const ManageUser = ({ users }) => {
       <div className="overflow-x-auto">
         <table className="w-full border border-gray-600">
           {/* Table Header */}
-          <thead className="bg-blue-600 text-white">
+          <thead className="bg-blue-500 text-white">
             <tr>
               <th className="p-3 border border-gray-600 text-left">Name</th>
               <th className="p-3 border border-gray-600 text-left">Email</th> {/* Swapped */}
