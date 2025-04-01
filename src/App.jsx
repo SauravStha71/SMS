@@ -1,19 +1,13 @@
-import { useState } from 'react';
-import './App.css';
-
+import React, { useState } from "react";
+import UserTable from "./ManageUser";
+import TableComponent from "./Tablecomponent"; // Import the table component
+import ManageUser from "./ManageUser";
 function App() {
-  const [count, setCount] = useState(0);
-
+  const [users, setUsers] = useState([]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className='text-pink-600'>Welcome to Vite + React</h1>
-        <p>
-          <button onClick={() => setCount((count) => count + 1)}>
-            Count: {count}
-          </button>
-        </p>
-      </header>
+    <div className="p-5">
+      <h1 className="text-2xl font-bold mb-4 text-center">User Data Table</h1>
+      <TableComponent />
     </div>
   );
 }
