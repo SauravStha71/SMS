@@ -65,8 +65,8 @@ const TableComponent = () => {
             <tr
               key={row.id}
               className={`border ${
-                row.selected ? "bg-blue-300" : "even:bg-blue-100 odd:bg-white"
-              } hover:bg-blue-200 transition-all`}
+                row.selected ? "bg-green-300" : "even:bg-blue-100 odd:bg-white"
+              } hover:bg-green-300 transition-all`}
             >
               <td className="border p-3 text-center">
                 <input
