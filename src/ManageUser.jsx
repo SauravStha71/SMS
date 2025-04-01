@@ -1,16 +1,16 @@
 import React from "react";
 
-const UserTable = ({ users }) => {
+const ManageUser = ({ users }) => {
   return (
     <div className="container mx-auto my-5">
       <div className="overflow-x-auto">
-        <table className="w-full  border border-gray-600 md">
+        <table className="w-full border border-gray-600">
           {/* Table Header */}
-          <thead className="bg-blue-600   text-white">
+          <thead className="bg-blue-600 text-white">
             <tr>
               <th className="p-3 border border-gray-600 text-left">Name</th>
-              <th className="p-3 border border-gray-600 text-left">Role</th>
-              <th className="p-3 border border-gray-600 text-left">Email</th>
+              <th className="p-3 border border-gray-600 text-left">Email</th> {/* Swapped */}
+              <th className="p-3 border border-gray-600 text-left">Role</th> {/* Swapped */}
               <th className="p-3 border border-gray-600 text-left">Actions</th>
             </tr>
           </thead>
@@ -19,10 +19,15 @@ const UserTable = ({ users }) => {
           <tbody>
             {users.length > 0 ? (
               users.map((user, index) => (
-                <tr key={index} className={`${index % 2 === 0 ? "bg-blue-100" : "bg-white"}`}>
+                <tr
+                  key={index}
+                  className={`border ${
+                    index % 2 === 1 ? "bg-blue-100" : "bg-white"
+                  } hover:bg-green-300 transition-all`}
+                >
                   <td className="p-3 border">{user.name}</td>
-                  <td className="p-3 border">{user.email}</td>
-                  <td className="p-3 border">{user.role}</td>
+                  <td className="p-3 border">{user.email}</td> {/* Swapped */}
+                  <td className="p-3 border">{user.role}</td> {/* Swapped */}
                   <td className="p-3 border">
                     <button className="bg-blue-500 text-white px-3 py-1 rounded mr-2">Edit</button>
                     <button className="bg-red-500 text-white px-3 py-1 rounded">Delete</button>
@@ -43,4 +48,4 @@ const UserTable = ({ users }) => {
   );
 };
 
-export default UserTable;
+export default ManageUser;
