@@ -44,20 +44,20 @@ const TableComponent = () => {
     <div className="overflow-x-auto p-4">
       <table className="w-full border border-gray-300 shadow-lg rounded-lg">
         <thead>
-          <tr className="bg-blue-600 text-white">
-            <th className="border p-3 text-center">
+          <tr className="bg-blue-500 text-white">
+            <th className="border border-black p-3 text-center">
               <input type="checkbox" disabled />
             </th>
-            <th className="border p-3">Branch Code</th>
-            <th className="border p-3">Branch</th>
-            <th className="border p-3">SCNO</th>
-            <th className="border p-3">Customer ID</th>
-            <th className="border p-3">Name</th>
-            <th className="border p-3">Address</th>
-            <th className="border p-3">Mobile Number</th>
-            <th className="border p-3">No. of Days</th>
-            <th className="border p-3">Balance Amount</th>
-            <th className="border p-3">Prepaid Date</th>
+            <th className="border border-black p-3">Branch Code</th>
+            <th className="border border-black p-3">Branch</th>
+            <th className="border border-black p-3">SCNO</th>
+            <th className="border border-black p-3">Customer ID</th>
+            <th className="border border-black p-3">Name</th>
+            <th className="border border-black p-3">Address</th>
+            <th className="border border-black p-3">Mobile Number</th>
+            <th className="border border-black p-3">No. of Days</th>
+            <th className="border border-black p-3">Balance Amount</th>
+            <th className="border border-black p-3">Prepaid Date</th>
           </tr>
         </thead>
         <tbody>

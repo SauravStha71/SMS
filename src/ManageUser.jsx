@@ -4,14 +4,14 @@ const UserTable = ({ users }) => {
   return (
     <div className="container mx-auto my-5">
       <div className="overflow-x-auto">
-        <table className="w-full border-collapse border border-gray-300 shadow-md">
+        <table className="w-full  border border-gray-600 md">
           {/* Table Header */}
-          <thead className="bg-blue-600 text-white">
+          <thead className="bg-blue-600   text-white">
             <tr>
-              <th className="p-3 text-left">Name</th>
-              <th className="p-3 text-left">Email</th>
-              <th className="p-3 text-left">Role</th>
-              <th className="p-3 text-left">Actions</th>
+              <th className="p-3 border border-gray-600 text-left">Name</th>
+              <th className="p-3 border border-gray-600 text-left">Role</th>
+              <th className="p-3 border border-gray-600 text-left">Email</th>
+              <th className="p-3 border border-gray-600 text-left">Actions</th>
             </tr>
           </thead>
 
